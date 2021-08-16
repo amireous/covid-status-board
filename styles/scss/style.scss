@@ -1,0 +1,194 @@
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .background-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: $primary-pink;
+    z-index: -1;
+  }
+  .background-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: $white-color;
+    z-index: -1;
+  }
+  .input {
+    position: relative;
+
+    input[type="text"] {
+      padding: $small-padding $medium-padding $small-padding $medium-padding -
+        0.5;
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+      margin: $medium-margin 0;
+      transition: 0.5s all;
+
+      &:focus {
+        border: 1px solid $primary-blue;
+        box-shadow: 0 3px 5px $primary-blue, 0 -3px 5px $primary-blue;
+      }
+    }
+    .search-btn {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 197px;
+      margin: 0 $small-margin;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    .fa-search {
+      color: $grey-color;
+      transition: 0.3s color;
+
+      &:hover {
+        color: $black-color;
+      }
+    }
+  }
+  .pannel {
+    width: 900px;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    padding: 0 $medium-padding $medium-padding;
+    padding: 0 2rem 2rem;
+    box-shadow: 0 3px 1px #4841419c;
+    position: relative;
+  }
+
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #292929cb;
+    border-radius: inherit;
+    opacity: 0;
+  }
+  h2 {
+    text-align: center;
+    padding: $base-padding - 0.3 0;
+
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  .covid-pannel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .case {
+    padding: $medium-padding - 0.5 $base-padding;
+    border-radius: 5px;
+    color: $white-color;
+
+    i {
+      font-size: 2rem;
+    }
+
+    .case-text {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+
+    .case-number {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-top: $small-margin;
+    }
+  }
+  .active-cases {
+    background-color: $primary-blue;
+  }
+
+  .critical-cases {
+    background-color: $primary-light-red;
+  }
+  .recoverd-cases {
+    background-color: $primary-green;
+  }
+
+  .total-cases {
+    background-color: $primary-red;
+  }
+
+  .total-deaths {
+    background-color: $primary-pink;
+  }
+  .total-tests {
+    background-color: $primary-orange;
+  }
+}
+
+.input-section {
+  position: relative;
+}
+
+.error-message {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 2px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: $white-color;
+  border-radius: 20px;
+  padding: $small-padding;
+}
+
+.loader {
+  width: 65px;
+  height: 65px;
+  border-radius: 33px;
+  border: 8px solid rgba(228, 228, 228, 0.432);
+  border-bottom: 8px solid $white-color;
+  margin: $base-margin 0;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
