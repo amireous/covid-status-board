@@ -1,0 +1,23 @@
+{
+  "name": "covid-pannel",
+  "version": "1.0.0",
+  "main": "script.js",
+  "dependencies": {
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amireous/covid-status-board.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amireous/covid-status-board/issues"
+  },
+  "homepage": "https://github.com/amireous/covid-status-board#readme",
+  "description": ""
+}
