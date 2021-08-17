@@ -194,8 +194,12 @@ body {
 }
 
 @media screen and (max-width: 1030px) {
+  .container {
+    height: auto;
+  }
   .pannel {
-    width: calc(100% - 2rem);
+    width: calc(100% - 1.5rem);
+    margin-bottom: $medium-margin;
   }
 
   .covid-pannel {
