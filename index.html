@@ -1,80 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/css/style.css" />
-    <title>Covid</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="background-1"></div>
-      <div class="background-2"></div>
-      <section class="input-section">
-        <form class="input">
-          <input
-            type="text"
-            placeholder="Enter the country name"
-            class="user-input"
-          />
-          <button class="search-btn"><i class="fas fa-search"></i></button>
-        </form>
-        <div id="error" class="error-message"></div>
-      </section>
 
-      <div class="pannel">
-        <div class="loading">
-          <div class="loader"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/css/style.css" />
+  <title>Covid</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="background-1"></div>
+    <div class="background-2"></div>
+    <section class="input-section">
+      <form class="input">
+        <input type="text" placeholder="Enter the country name" class="user-input" />
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+      </form>
+      <div id="error" class="error-message"></div>
+    </section>
+
+    <div class="pannel">
+      <div class="loading">
+        <div class="loader"></div>
+      </div>
+      <h2>COVID-19 Cases in <span id="country-name"></span></h2>
+      <div class="covid-pannel">
+        <div class="active-cases case">
+          <i class="fas fa-tachometer-alt"></i>
+          <p class="case-text">active cases</p>
+          <p class="case-number" id="active-cases-number"></p>
         </div>
-        <h2>COVID-19 Cases in <span id="country-name"></span></h2>
-        <div class="covid-pannel">
-          <div class="active-cases case">
-            <i class="fas fa-tachometer-alt"></i>
-            <p class="case-text">active cases</p>
-            <p class="case-number" id="active-cases-number"></p>
-          </div>
-          <div class="critical-cases case">
-            <i class="fas fa-times-circle"></i>
-            <p class="case-text">critical cases</p>
-            <p class="case-number" id="critical-cases-number"></p>
-          </div>
-          <div class="recoverd-cases case">
-            <i class="fas fa-check-square"></i>
-            <p class="case-text">recovered cases</p>
-            <p class="case-number" id="recovered-cases-number"></p>
-          </div>
-          <div class="total-cases case">
-            <i class="fas fa-th-list"></i>
-            <p class="case-text">total cases</p>
-            <p class="case-number" id="total-cases-number"></p>
-          </div>
-          <div class="total-deaths case">
-            <i class="fas fa-times"> </i>
-            <p class="case-text">total deathes</p>
-            <p class="case-number" id="deathes-cases-number"></p>
-          </div>
-          <div class="total-tests case">
-            <i class="fa fa-eye" aria-hidden="true"></i>
-            <p class="case-text">total testes done</p>
-            <p class="case-number" id="tests-cases-number"></p>
-          </div>
+        <div class="critical-cases case">
+          <i class="fas fa-times-circle"></i>
+          <p class="case-text">critical cases</p>
+          <p class="case-number" id="critical-cases-number"></p>
+        </div>
+        <div class="recoverd-cases case">
+          <i class="fas fa-check-square"></i>
+          <p class="case-text">recovered cases</p>
+          <p class="case-number" id="recovered-cases-number"></p>
+        </div>
+        <div class="total-cases case">
+          <i class="fas fa-th-list"></i>
+          <p class="case-text">total cases</p>
+          <p class="case-number" id="total-cases-number"></p>
+        </div>
+        <div class="total-deaths case">
+          <i class="fas fa-times"> </i>
+          <p class="case-text">total deathes</p>
+          <p class="case-number" id="deathes-cases-number"></p>
+        </div>
+        <div class="total-tests case">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+          <p class="case-text">total testes done</p>
+          <p class="case-number" id="tests-cases-number"></p>
         </div>
       </div>
     </div>
-  </body>
-  <script src="script.js"></script>
+  </div>
+</body>
+<script src="script.js"></script>
+
 </html>

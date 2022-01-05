@@ -28,6 +28,7 @@ body {
     background-color: $primary-pink;
     z-index: -1;
   }
+
   .background-2 {
     position: absolute;
     bottom: 0;
@@ -37,12 +38,12 @@ body {
     background-color: $white-color;
     z-index: -1;
   }
+
   .input {
     position: relative;
 
     input[type="text"] {
-      padding: $small-padding $medium-padding $small-padding $medium-padding -
-        0.5;
+      padding: $small-padding $medium-padding $small-padding $medium-padding - 0.5;
       font-family: "Poppins", sans-serif;
       font-weight: 600;
       border-radius: 30px;
@@ -56,11 +57,12 @@ body {
         box-shadow: 0 3px 5px $primary-blue, 0 -3px 5px $primary-blue;
       }
     }
+
     .search-btn {
       position: absolute;
       top: 0;
       bottom: 0;
-      left: 197px;
+      right: 0;
       margin: 0 $small-margin;
       background: none;
       border: none;
@@ -90,6 +92,7 @@ body {
     border-radius: inherit;
     opacity: 0;
   }
+
   h2 {
     text-align: center;
     padding: $base-padding - 0.3 0;
@@ -120,6 +123,7 @@ body {
       margin-top: $small-margin;
     }
   }
+
   .active-cases {
     background-color: $primary-blue;
   }
@@ -127,6 +131,7 @@ body {
   .critical-cases {
     background-color: $primary-light-red;
   }
+
   .recoverd-cases {
     background-color: $primary-green;
   }
@@ -138,6 +143,7 @@ body {
   .total-deaths {
     background-color: $primary-pink;
   }
+
   .total-tests {
     background-color: $primary-orange;
   }
@@ -158,6 +164,7 @@ body {
   border-radius: 20px;
   padding: $small-padding;
 }
+
 .pannel {
   width: 900px;
   background-color: #f6f6f6;
@@ -188,6 +195,7 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -197,6 +205,7 @@ body {
   .container {
     height: auto;
   }
+
   .pannel {
     width: calc(100% - 1.5rem);
     margin-bottom: $medium-margin;

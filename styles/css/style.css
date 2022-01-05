@@ -17,6 +17,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .container .background-1 {
   position: absolute;
   top: 0;
@@ -26,6 +27,7 @@ body {
   background-color: #e84393;
   z-index: -1;
 }
+
 .container .background-2 {
   position: absolute;
   bottom: 0;
@@ -35,9 +37,11 @@ body {
   background-color: #fff;
   z-index: -1;
 }
+
 .container .input {
   position: relative;
 }
+
 .container .input input[type=text] {
   padding: 0.5rem 2rem 0.5rem 1.5rem;
   font-family: "Poppins", sans-serif;
@@ -48,27 +52,32 @@ body {
   margin: 32px 0;
   transition: 0.5s all;
 }
+
 .container .input input[type=text]:focus {
   border: 1px solid #3498db;
   box-shadow: 0 3px 5px #3498db, 0 -3px 5px #3498db;
 }
+
 .container .input .search-btn {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 197px;
+  right: 0;
   margin: 0 8px;
   background: none;
   border: none;
   outline: none;
 }
+
 .container .input .fa-search {
   color: #757575;
   transition: 0.3s color;
 }
+
 .container .input .fa-search:hover {
   color: #000;
 }
+
 .container .loading {
   display: flex;
   justify-content: center;
@@ -82,46 +91,58 @@ body {
   border-radius: inherit;
   opacity: 0;
 }
+
 .container h2 {
   text-align: center;
   padding: 0.7rem 0;
 }
+
 .container h2 span {
   text-transform: capitalize;
 }
+
 .container .case {
   padding: 1.5rem 1rem;
   border-radius: 5px;
   color: #fff;
 }
+
 .container .case i {
   font-size: 2rem;
 }
+
 .container .case .case-text {
   font-size: 0.65rem;
   font-weight: 600;
   text-transform: capitalize;
 }
+
 .container .case .case-number {
   font-size: 2rem;
   font-weight: 600;
   margin-top: 8px;
 }
+
 .container .active-cases {
   background-color: #3498db;
 }
+
 .container .critical-cases {
   background-color: #e74c3c;
 }
+
 .container .recoverd-cases {
   background-color: #27ae60;
 }
+
 .container .total-cases {
   background-color: #c0392b;
 }
+
 .container .total-deaths {
   background-color: #e84393;
 }
+
 .container .total-tests {
   background-color: #f39c12;
 }
@@ -172,10 +193,12 @@ body {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 @media screen and (max-width: 1030px) {
   .container {
     height: auto;
