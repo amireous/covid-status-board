@@ -1,3 +1,5 @@
+// import './styles/scss/style.scss';
+import './styles/css/style.css'
 "use strict";
 
 const userInput = document.querySelector(".user-input");

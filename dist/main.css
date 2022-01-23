@@ -1,0 +1,215 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .background-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #e84393;
+  z-index: -1;
+}
+
+.container .background-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #fff;
+  z-index: -1;
+}
+
+.container .input {
+  position: relative;
+}
+
+.container .input input[type=text] {
+  padding: 0.5rem 2rem 0.5rem 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  margin: 32px 0;
+  transition: 0.5s all;
+}
+
+.container .input input[type=text]:focus {
+  border: 1px solid #3498db;
+  box-shadow: 0 3px 5px #3498db, 0 -3px 5px #3498db;
+}
+
+.container .input .search-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 8px;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.container .input .fa-search {
+  color: #757575;
+  transition: 0.3s color;
+}
+
+.container .input .fa-search:hover {
+  color: #000;
+}
+
+.container .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #292929cb;
+  border-radius: inherit;
+  opacity: 0;
+}
+
+.container h2 {
+  text-align: center;
+  padding: 0.7rem 0;
+}
+
+.container h2 span {
+  text-transform: capitalize;
+}
+
+.container .case {
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.container .case i {
+  font-size: 2rem;
+}
+
+.container .case .case-text {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.container .case .case-number {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.container .active-cases {
+  background-color: #3498db;
+}
+
+.container .critical-cases {
+  background-color: #e74c3c;
+}
+
+.container .recoverd-cases {
+  background-color: #27ae60;
+}
+
+.container .total-cases {
+  background-color: #c0392b;
+}
+
+.container .total-deaths {
+  background-color: #e84393;
+}
+
+.container .total-tests {
+  background-color: #f39c12;
+}
+
+.input-section {
+  position: relative;
+}
+
+.error-message {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 2px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+
+.pannel {
+  width: 900px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  padding: 0 2rem 2rem;
+  box-shadow: 0 3px 1px #4841419c;
+  position: relative;
+}
+
+.covid-pannel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.loader {
+  width: 65px;
+  height: 65px;
+  border-radius: 33px;
+  border: 8px solid rgba(228, 228, 228, 0.432);
+  border-bottom: 8px solid #fff;
+  margin: 16px 0;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .container {
+    height: auto;
+  }
+
+  .pannel {
+    width: calc(100% - 1.5rem);
+    margin-bottom: 32px;
+  }
+
+  .covid-pannel {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
