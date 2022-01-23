@@ -19,7 +19,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
